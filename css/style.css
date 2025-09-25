@@ -1,0 +1,106 @@
+*{
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+body{
+  background-color: black;
+
+}
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* color: white; */
+  padding: 20px;
+  margin-bottom: 15px;
+  margin-top: 65px;
+    scroll-margin-top: 56px; 
+}
+.row-margin{
+
+  margin-top: 35px;
+}
+  .row-padding{
+
+  padding: 20px;
+}
+#projects {
+  background: linear-gradient(to bottom right, #43cea2, #185a9d);
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.about-animation-card {
+  position: relative;
+  border-radius: 15px;
+  padding: 3px; 
+  z-index: 1;
+}
+
+.about-animation-card::before,
+.about-animation-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  background-image: conic-gradient(
+    from var(--angle),
+    #ff4545,
+    #00ff99,
+    #006aff,
+    #ff0095,
+    #ff4545
+  );
+  animation: spin 3s linear infinite;
+  z-index: -1;
+}
+
+.about-animation-card::before {
+  filter: blur(15px); /* Soft glow */
+  opacity: 0.6;
+}
+
+.inner-content {
+  border-radius: 10px;
+  /* background: white; Inner card background */
+  position: relative;
+  z-index: 1;
+}
+
+/* Make all cards same height */
+#skills .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  #skills .card {
+    max-width: 90%;
+  }
+}
+
+/* Carousel button size */
+#skills .carousel-control-prev-icon,
+#skills .carousel-control-next-icon {
+  width: 40px;
+  height: 40px;
+}
+
+  /* Contact section */
+.contact-form {
+   background: linear-gradient(to bottom right, rgba(133, 222, 25, 0.987), rgb(57, 87, 3));
+
+}
+
+/* model color */
+.model-color{
+      background: linear-gradient(to bottom right,rgba(84, 78, 83, 0.987), rgb(7, 1, 6));
+}

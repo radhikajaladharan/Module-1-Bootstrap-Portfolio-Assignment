@@ -1,0 +1,6 @@
+# Ignore all .mov videos in Video folder
+Video/*.mov
+
+
+# Ignore system files
+.DS_Store
